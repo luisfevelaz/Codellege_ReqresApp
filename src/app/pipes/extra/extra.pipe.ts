@@ -3,6 +3,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'extra'
 })
+
+// recibe el id del usuario y dependiendo si es múltiplo de 2, 3 u otro devuelve una profesión
 export class ExtraPipe implements PipeTransform {
 
   transform(value: number): string {

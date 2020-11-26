@@ -4,6 +4,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 @Injectable({
   providedIn: 'root'
 })
+
+// Valida que no se ingrese la palabra "ninguno" y también que la contraseña y confirmar contraseña coincidan
 export class ValidarService {
 
   constructor() { }

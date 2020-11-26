@@ -1,3 +1,4 @@
+<!-- Renderiza los usuarios individualemnte obtrniendo el id de la ruta -->
 <div class="jumbotron">
     <div class="row">
         <img class="col-3" src="{{usuario.avatar}}" alt="userImg">
@@ -15,6 +16,7 @@
         <button class="btn btn-outline-success btn-block col-4">Contrata el servicio Premium</button>
         <button class="btn btn-outline-danger btn-block col-4 ml-3" (click)="borrar()">Borrar de lista de contactos</button>
     </div>
+
     <div class="alert alert-danger mt-5" *ngIf="deleted">
         Usuario Borrado
     </div>
