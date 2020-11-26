@@ -32,6 +32,8 @@ export class PetitionService {
   }
 
   deleteUser(id){
+    console.log('Entre a delete');
+    
     return this.http.delete(`https://reqres.in/api/users/${id}`).pipe(map(data => {
       return data;
     }))

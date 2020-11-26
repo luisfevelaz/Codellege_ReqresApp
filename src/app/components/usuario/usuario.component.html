@@ -1,14 +1,21 @@
 <div class="jumbotron">
     <div class="row">
         <img class="col-3" src="{{usuario.avatar}}" alt="userImg">
-        <div class="col-5 border" [class.border-danger]="usuario.id | extra" [class.border-primary]="!(usuario.id | extra)">
+        <div class="col-5 ">
             <h1>{{usuario.first_name}} {{usuario.last_name}}</h1>
 
-            <h3 class="text-secondary">¿Necesitas ayuda de <span class="h3 text-dark">{{usuario.first_name}}</span>?</h3>
+            <h3 class="text-secondary">¿Quieres hablar con <span class="h3 text-dark">{{usuario.first_name}}</span>?</h3>
             <h3>¡Envíale un mensaje! {{usuario.email}}</h3>
+            <!-- exytra devuelve una profesión ficticia -->
+            <h5 class="text-success">{{usuario.id | extra}}</h5> 
         </div>
+        <div class="col-2 p-5"><i class="far fa-address-book text-primary" id="icono"></i></div>
     </div>
-    <div class="div mt-5">
-        <button class="btn btn-outline-danger btn-block">Contrata el servicio Premium</button>
+    <div class="mt-5 row">
+        <button class="btn btn-outline-success btn-block col-4">Contrata el servicio Premium</button>
+        <button class="btn btn-outline-danger btn-block col-4 ml-3" (click)="borrar()">Borrar de lista de contactos</button>
+    </div>
+    <div class="alert alert-danger mt-5" *ngIf="deleted">
+        Usuario Borrado
     </div>
 </div>

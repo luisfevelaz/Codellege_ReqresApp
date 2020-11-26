@@ -5,8 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ExtraPipe implements PipeTransform {
 
-  transform(value: number): boolean {
-    return (value % 2 == 0)? true : false;
+  transform(value: number): string {
+    if(value % 2 == 0){
+      return "Ingeniero en sistemas";
+    }else if(value % 3 == 0){
+      return "Ingeniero en Electrónica";
+    }else{
+      return "Ingeniero en Nanotecnología";
+    }
   }
 
 }

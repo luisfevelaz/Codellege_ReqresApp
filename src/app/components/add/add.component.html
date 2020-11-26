@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div class="alert alert-success mt-5">
+    <div class="alert alert-success mt-5" *ngIf="creado">
         Usuario Creado
         <p>Id: {{usuario.id}} </p>
         <p>Nombre: {{usuario.nombre}}</p>

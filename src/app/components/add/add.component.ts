@@ -66,7 +66,7 @@ export class AddComponent implements OnInit {
         this.creado = true;
         this.usuario.id = data.id;
         this.usuario.nombre = data.name;
-        this.usuario.trabajo = data.nam
+        this.usuario.trabajo = data.job;
       });
     }
     
